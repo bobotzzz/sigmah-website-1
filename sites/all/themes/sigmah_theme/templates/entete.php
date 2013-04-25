@@ -80,11 +80,11 @@
 				
             </div>
 <!--
-gestion des menus déroulants :
+gestion des menus dï¿½roulants :
 	dans #main_menu on a l'ul li des menus principaux.
-    Si la li à la class 'hassub_menu', il y a un menu déroulant qui va avec, sinon, class 'hasnsub_menu'
+    Si la li ï¿½ la class 'hassub_menu', il y a un menu dï¿½roulant qui va avec, sinon, class 'hasnsub_menu'
     Quand on est dans une page, le lien a la class 'select', et c'est le seul a l'avoir.
-    L'id d'un li qui a un sous menu, doit correspondre a l'id du sous menu a dérouler en y rajoutant 'sub_'
+    L'id d'un li qui a un sous menu, doit correspondre a l'id du sous menu a dï¿½rouler en y rajoutant 'sub_'
     par exemple li_pres deroule sub_li_pres
     l'id d'un lien doit correspondre a cela aussi, avec le 'li_' en moins.
 -->			
@@ -157,3 +157,12 @@ gestion des menus déroulants :
 		 ?>
         </div>
     </div>
+ <script>
+    $(document).ready(function(){
+        var url = <?php echo base_path(); ?>;
+        $('div#top_header h1#title').css('cursor', 'pointer');
+        $('div#top_header h1#title').click(function(){ 
+            window.location.href = url+"home";
+        }) ;
+    })
+</script>
